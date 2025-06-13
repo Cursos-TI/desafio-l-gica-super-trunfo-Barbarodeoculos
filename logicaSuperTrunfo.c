@@ -39,11 +39,13 @@ int main() {
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
 
-char estado[25], estado2[25];
-char cod[4], cod2[4];
-char cidade[25] = ("São Paulo"), cidade2[25] = ("Rio de Janeiro");
-unsigned long int populacao = 11450, populacao2 = 6211 ; //6211.000
-int turistico = 380, turistico2 = 310, opcao;
+char estado[25] = ("São Paulo"), estado2[25] = ("Rio de Janeiro");
+char cod[6] = ("BRSP1");
+char cod2[6] = ("BRRJ1");
+char cidade[25] = ("São Paulo");
+char cidade2[25] = ("Rio de Janeiro");
+unsigned long int populacao = 11450, populacao2 = 6211 ; 
+int turistico = 380, turistico2 = 310, opcao,opcao2;
 float area = 1521, area2 = 1200; //1521202  1200329
 float pib = 828.98, pib2 = 359.64;
 float densidade, densidade2;
@@ -66,22 +68,27 @@ float super2 = populacao2 + area2 + pib2 + turistico2 + capita2 + (1/ densidade2
        printf("%s venceu com a população de %d, contra %d de %s",cidade2, populacao2, populacao, cidade);
     }
 */
-//Nivel Aventureiro  
-printf("### Super Trunfo ###");
-printf("1 - Exibir Cartas\n");
-printf("2 - População.\n");
-printf("3 - Área.\n");
-printf("4 - PIB.\n");
-printf("5 - Ponto Turístico.\n");
-printf("6 - Densidade demográfica.\n");
-printf("7 - Sair...\n");
-printf("Escolha uma propriedade que deseja comparar ou sair do jogo.\n");
-scanf("%d", &opcao);
-
+Nivel Aventureiro  
+    printf("### Super Trunfo ###\n");
+    printf("1 - Exibir Cartas\n");
+    printf("2 - Comparar População.\n");
+    printf("3 - Comparar Área.\n");
+    printf("4 - Comparar PIB.\n");
+    printf("5 - Comparar Ponto Turístico.\n");
+    printf("6 - Comparar Densidade demográfica.\n");
+    printf("7 - Sair...\n");
+    printf("Escolha uma Opção.\n");
+    scanf("%d", &opcao);
+/*
     switch (opcao)
     {
     case 1:
-        printf("%s X %s");
+        printf("Carta 1\n Estado: %s\n Código da carta: %s  \n ",estado,cod);
+        printf("Cidade: %s\n População: %lu Milhões de Habitantes\n Área: %.2f Km²\n",cidade,populacao,area);
+        printf("PIB: %.2f Bilhões de Reais\n Pontos Turísticos: %d \n",pib,turistico);
+        printf("Carta 2\n Estado: %s\n Código da carta: %s \n ",estado2,cod2);
+        printf("Cidade: %s\n População: %lu Milhões de Habitantes\n Área: %.2fKm²\n ",cidade2,populacao2,area2);
+        printf("PIB: %.2f Bilhões de Reais\n Pontos Turísticos: %d\n",pib2,turistico2);
     break;
     case 2:
         printf("Você escolheu População\n");
@@ -147,6 +154,40 @@ scanf("%d", &opcao);
         printf("Opção Invalida.\n");
     break;
     }
-
+*/
+//Nivel Mestre
+     switch (opcao)
+     {
+     case 1:
+        printf("Carta 1\n Estado: %s\n Código da carta: %s  \n ",estado,cod);
+        printf("Cidade: %s\n População: %lu Milhões de Habitantes\n Área: %.2f Km²\n",cidade,populacao,area);
+        printf("PIB: %.2f Bilhões de Reais\n Pontos Turísticos: %d \n",pib,turistico);
+        printf("Carta 2\n Estado: %s\n Código da carta: %s \n ",estado2,cod2);
+        printf("Cidade: %s\n População: %lu Milhões de Habitantes\n Área: %.2fKm²\n ",cidade2,populacao2,area2);
+        printf("PIB: %.2f Bilhões de Reais\n Pontos Turísticos: %d\n",pib2,turistico2);
+        break;
+     case 2,3,4,5,6:
+        printf("Escolha uma segunda propriedade para comparar");
+        printf("2 - Comparar População.\n");
+        printf("3 - Comparar Área.\n");
+        printf("4 - Comparar PIB.\n");
+        printf("5 - Comparar Ponto Turístico.\n");
+        printf("6 - Comparar Densidade demográfica.\n");
+        switch (opcao2)
+        {
+        case constant expression:
+            /* code */
+            break;
+        case 7:
+        printf("Saindo...(T^T)\n");
+        break;
+        default:
+        printf("Opção Invalida.\n");
+            break;
+        }
+     break;
+     default:
+        break;
+     }
     return 0;
 }
